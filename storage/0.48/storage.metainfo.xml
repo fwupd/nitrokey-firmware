@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2017 Richard Hughes <richard@hughsie.com> -->
+<component type="firmware">
+  <id>com.nitrokey.storage.firmware</id>
+  <name>Nitrokey Storage</name>
+  <summary>Firmware for the Nitrokey Storage</summary>
+  <description>
+    <p>
+      Updating the firmware on your Storage improves performance and adds
+      new features.
+    </p>
+  </description>
+  <provides>
+    <!-- USB\VID_20A0&PID_4109 -->
+    <firmware type="flashed">9c9871fe-75bd-5fde-9425-6999269caeeb</firmware>
+  </provides>
+  <url type="homepage">https://www.nitrokey.com/products/nitrokey-storage</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>Proprietary</project_license>
+  <developer_name>Nitrokey</developer_name>
+  <releases>
+    <release urgency="medium" version="0.48" date="2017-08-11">
+      <checksum filename="firmware_V0.48.0.hex" target="content"/>
+      <description>
+        <p>
+          Correct handling of a syncron smart card access via HID and CCID.
+        </p>
+        <p>
+          Warning - MacOS users: this release may handle your encrypted volumes improperly.
+          For details please see https://github.com/Nitrokey/nitrokey-storage-firmware/issues/44.
+        </p>
+      </description>
+    </release>
+  </releases>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://raw.githubusercontent.com/hughsie/nitrokey-firmware/master/storage/images/screenshot.png</image>
+      <caption>Start nitrokey app then click Configure ⇒ Enable firmware update.</caption>
+    </screenshot>
+  </screenshots>
+  <requires>
+    <!-- only newer versions of fwupd know how to write to this hardware -->
+    <id compare="ge" version="1.0.1">org.freedesktop.fwupd</id>
+  </requires>
+</component>
