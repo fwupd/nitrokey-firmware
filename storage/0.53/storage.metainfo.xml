@@ -19,7 +19,7 @@
   <project_license>GPLv3</project_license>
   <developer_name>Nitrokey</developer_name>
   <releases>
-    <release urgency="medium" version="0.53" date="2018-11-23">
+    <release urgency="medium" version="0.53" date="2018-11-23" install_duration="120">
       <checksum filename="firmware_V0.53.0.hex" target="content"/>
       <description>
         <p>
@@ -40,4 +40,11 @@
     <!-- only newer versions of fwupd know how to write to this hardware -->
     <id compare="ge" version="1.0.2">org.freedesktop.fwupd</id>
   </requires>
+  <custom>
+  	<value key="LVFS::UpdateProtocol">org.usb.dfu</value>
+  </custom>
+  <keywords>
+    <keyword>nitrokey</keyword>
+    <keyword>storage</keyword>
+  </keywords>
 </component>
