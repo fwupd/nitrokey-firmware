@@ -26,12 +26,7 @@
           Fix Windows 1809 communication issue
         </p>
         <p>
-		This update fixes Nitrokey App communication issue under Windows 10 1809: NitrokeyApp#392. It is optional for users not using this operating system, or not using the Nitrokey App there. The only change is redefining the HID descriptor, which will make the device to not be identified as a virtual keyboard and allow to connect by non-system applications. As a consequence of removing the virtual keyboard, the 'special key double press OTP insertion' feature will now not work (it might be restored in future firmware versions).
-
-Issue affects only communication with the Nitrokey App. Smart card communication should not be affected.
-
-Firmware is signed with szczepan@nitrokey.com, key id: 868184069239FF65DE0BCD7D D9BAE35991DE5B22 (valid until 2019-01-10). ID can be confirmed with the one on the main download site.
-        </p>
+		This update fixes Nitrokey App communication issue under Windows 10 1809: NitrokeyApp#392. It is optional for users not using this operating system, or not using the Nitrokey App there. It contains however strongly recommended update, published in v0.51.</p>
       </description>
     </release>
   </releases>
